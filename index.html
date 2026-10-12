@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tharun Duggi — AI Agent Developer & Python Full Stack Engineer</title>
+  <meta name="description" content="Tharun Duggi — AI Agent Developer, Python Full Stack & AI/ML Engineer. Production RAG pipelines, multi-agent workflows, FastAPI/Flask backends and serverless AWS." />
+  <meta name="theme-color" content="#05060b" />
+  <meta property="og:title" content="Tharun Duggi — AI Agent Developer & Python Full Stack Engineer" />
+  <meta property="og:description" content="Production-grade RAG pipelines, autonomous AI agents and serverless Python backends. 3+ years shipping AI to production." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tharun-duggi-portfolio.vercel.app/" />
+  <meta property="og:image" content="https://tharun-duggi-portfolio.vercel.app/assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Tharun Duggi — AI Agent Developer and Python Full Stack Engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tharun-duggi-portfolio.vercel.app/assets/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2305060b'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='800' font-size='28' fill='url(%23g)'%3ETD%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">TD<span>.</span></div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <div class="loader__meta mono"><span id="loaderText">initialising neural mesh</span><span id="loaderPct">0%</span></div>
+    </div>
+  </div>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Tharun Duggi — home">TD<span>.</span></a>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#aidlc">AI-SDLC</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav__cta">Let's talk</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow reveal"><span class="pulse"></span><span>Open to opportunities<span class="eyebrow__sep"> · </span><span class="eyebrow__cities">Hyderabad · Chennai · Bengaluru</span></span></p>
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__word">Tharun</span></span>
+          <span class="hero__line"><span class="hero__word gradient-text">Duggi</span></span>
+        </h1>
+        <p class="hero__role mono reveal"><span class="hero__prompt">&gt;</span> <span id="roleText">AI Agent Developer</span><span class="caret">_</span></p>
+        <p class="hero__lede reveal">I build <strong>production-grade Generative AI</strong>: real-time voice agents, RAG pipelines, autonomous multi-agent workflows and high-throughput <strong>Python</strong> backends that ship, scale and cut cost.</p>
+        <div class="hero__ctas reveal">
+          <a href="#projects" class="btn btn--primary magnetic"><span>View my work</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="assets/Tharun_Duggi_Resume.pdf" class="btn btn--ghost magnetic" download><span>Download résumé</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <ul class="socials reveal" aria-label="Social links">
+          <li><a href="https://linkedin.com/in/tharun-duggi" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zM9.5 9.75h3.83v1.54h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.91 1.3-1.91 2.63V21h-4V9.75z"/></svg></a></li>
+          <li><a href="https://github.com/duggitharun909-cmyk" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a href="mailto:duggitharun909@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 6.5h18v11H3z M3.5 7l8.5 6.5L20.5 7"/></svg></a></li>
+        </ul>
+      </div>
+      <a href="#about" class="scroll-hint mono" aria-label="Scroll to about"><span class="scroll-hint__line"></span>scroll</a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><i>✦</i><span>LangChain</span><i>✦</i><span>RAG</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Flask</span><i>✦</i><span>AI Agents</span><i>✦</i><span>Voice AI</span><i>✦</i><span>AWS Lambda</span><i>✦</i><span>Vector DBs</span><i>✦</i><span>MongoDB</span><i>✦</i><span>MySQL</span><i>✦</i><span>Selenium</span><i>✦</i><span>Playwright</span><i>✦</i><span>Docker</span><i>✦</i>
+        <span>Python</span><i>✦</i><span>LangChain</span><i>✦</i><span>RAG</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Flask</span><i>✦</i><span>AI Agents</span><i>✦</i><span>Voice AI</span><i>✦</i><span>AWS Lambda</span><i>✦</i><span>Vector DBs</span><i>✦</i><span>MongoDB</span><i>✦</i><span>MySQL</span><i>✦</i><span>Selenium</span><i>✦</i><span>Playwright</span><i>✦</i><span>Docker</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">01</span>
+          <h2 class="section__title">Engineering AI that <span class="gradient-text">earns its place</span> in production.</h2>
+        </header>
+        <div class="about">
+          <div class="about__text reveal">
+            <p>I'm a <strong>Python Full Stack &amp; AI/ML Engineer</strong> with 3+ years of experience architecting Generative AI applications, multi-agent orchestrations and high-performance backend systems.</p>
+            <p>My focus is the gap between an impressive demo and a dependable product: low-latency <strong>Retrieval-Augmented Generation</strong>, autonomous agent workflows, and scalable APIs with <strong>LangChain, FastAPI and Flask</strong> — built cost-aware from day one, like migrating production workloads from EC2 to serverless AWS Lambda while holding 99.9% uptime.</p>
+            <p>I work <strong>AI-native</strong>: intent first, agents build, humans review — every stage of the lifecycle accelerated, none of it unaccountable.</p>
+          </div>
+          <div class="stats">
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="3">0</span>+</div><div class="stat__label">Years shipping Python &amp; AI to production</div></div>
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="55">0</span>%</div><div class="stat__label">Hosting cost cut via EC2 → Lambda migration</div></div>
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="500">0</span>+</div><div class="stat__label">Daily AI agent conversations handled</div></div>
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="10">0</span>K+</div><div class="stat__label">Active users on healthcare platforms</div></div>
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="60">0</span>%</div><div class="stat__label">Lower support latency with LLM context</div></div>
+            <div class="stat glass reveal"><div class="stat__value"><span class="count" data-to="75">0</span>%</div><div class="stat__label">Manual workload removed by automation</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">02</span>
+          <h2 class="section__title">Experience</h2>
+        </header>
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job__meta">
+              <span class="job__date mono">Jan 2026 — Present</span>
+              <span class="job__badge">Current</span>
+            </div>
+            <article class="job__card glass tilt">
+              <h3 class="job__role">Python AI Agent Developer</h3>
+              <p class="job__company">Techgy Innovations Pvt Ltd</p>
+              <ul class="job__list">
+                <li>Engineered production-grade <strong>RAG pipelines</strong> with LangChain and advanced vector indexing — higher context-retrieval accuracy, fewer hallucinations across autonomous agents.</li>
+                <li>Identified excessive EC2 spend and led a migration to <strong>serverless AWS Lambda</strong>, cutting production hosting costs by <strong>over 55%</strong>.</li>
+                <li>Architected high-throughput RESTful APIs with <strong>FastAPI &amp; Flask</strong>, improving end-to-end data transmission efficiency by <strong>25%</strong>.</li>
+                <li>Spearheaded agentic workflows and secure webhook integrations, automating <strong>40%</strong> of multi-turn user qualification and manual data logging.</li>
+                <li>Refactored MongoDB &amp; MySQL for low-latency streaming, accelerating real-time conversational responses.</li>
+              </ul>
+              <div class="tags"><span>LangChain</span><span>RAG</span><span>FastAPI</span><span>AWS Lambda</span><span>Vector DB</span><span>MongoDB</span><span>AIDLC</span></div>
+            </article>
+          </li>
+          <li class="job reveal">
+            <div class="job__meta">
+              <span class="job__date mono">Jan 2023 — Jan 2026</span>
+            </div>
+            <article class="job__card glass tilt">
+              <h3 class="job__role">Python Developer</h3>
+              <p class="job__company">Innoclique Cognitive Health Technologies</p>
+              <ul class="job__list">
+                <li>Built enterprise backends in <strong>Python &amp; Flask</strong> for mission-critical healthcare systems serving <strong>10,000+ active users</strong>.</li>
+                <li>Integrated LLM solutions via LangChain with contextual history tracking — support response latency down <strong>60%</strong>.</li>
+                <li>Built OOP + <strong>Selenium</strong> automation frameworks, removing <strong>75%</strong> of manual business-process workload.</li>
+                <li>Deployed PyAutoGUI RPA scripts syncing <strong>1,000+ daily financial transactions</strong> with core relational databases.</li>
+                <li>Tuned SQL queries and schemas for a <strong>40%</strong> performance gain through indexing and normalisation.</li>
+              </ul>
+              <div class="tags"><span>Flask</span><span>LangChain</span><span>Selenium</span><span>PyAutoGUI</span><span>MySQL</span><span>OOP</span></div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">03</span>
+          <h2 class="section__title">Selected work</h2>
+        </header>
+
+        <article class="project project--voice glass tilt reveal">
+          <div class="project__body">
+            <p class="project__kicker mono">Main project · Real-time Voice AI · Streaming</p>
+            <h3 class="project__title">AI Voice Agent for Lead Qualification</h3>
+            <p>A real-time voice agent that handles <strong>inbound and outbound phone calls</strong> and qualifies leads in natural conversation. Live call audio is streamed end to end. <strong>Plivo</strong> carries the telephony, <strong>Sarvam AI</strong> transcribes speech in <strong>Indian regional languages</strong>, an LLM agent drives the qualification dialogue, and <strong>Cartesia</strong> streams the spoken reply back to the caller.</p>
+            <ul class="project__points">
+              <li><b>Inbound + outbound</b> call flows on Plivo with bidirectional audio streaming over WebSockets.</li>
+              <li><b>Voice Activity Detection</b> for natural turn-taking: knowing when the caller has finished, and handling interruptions.</li>
+              <li><b>Latency engineering</b>: every stage streams (STT → LLM → TTS) so the agent answers without awkward silences.</li>
+            </ul>
+            <p class="project__impact"><span>Impact</span> Automated lead qualification over the phone, in the languages Indian customers actually speak.</p>
+            <div class="tags"><span>Python</span><span>WebSockets</span><span>Plivo</span><span>Sarvam AI (STT)</span><span>Cartesia (TTS)</span><span>VAD</span><span>LLM Agent</span><span>Streaming</span></div>
+          </div>
+          <div class="call" aria-label="Architecture: caller to Plivo media stream to VAD to Sarvam speech-to-text to LLM agent to Cartesia text-to-speech and back to the caller">
+            <div class="call__head">
+              <span class="call__live"><i></i>LIVE CALL</span>
+              <span class="mono">inbound · outbound</span>
+            </div>
+            <div class="wave" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <ol class="vpipe">
+              <li class="vpipe__node"><b>Plivo</b><small>telephony · audio stream</small></li>
+              <li class="vpipe__node"><b>VAD</b><small>turn-taking · interruptions</small></li>
+              <li class="vpipe__node vpipe__node--stt"><b>Sarvam AI</b><small>streaming STT · Indic languages</small></li>
+              <li class="vpipe__node vpipe__node--hot"><b>LLM Agent</b><small>lead qualification</small></li>
+              <li class="vpipe__node vpipe__node--tts"><b>Cartesia</b><small>streaming TTS</small></li>
+            </ol>
+            <p class="call__loop mono">↺ speech streamed back to caller</p>
+          </div>
+        </article>
+
+        <article class="project glass tilt reveal">
+          <div class="project__body">
+            <p class="project__kicker mono">Serverless Multi-Tenant RAG</p>
+            <h3 class="project__title">AI Agent Platform</h3>
+            <p>A multi-tenant AI agent platform on serverless principles handling <strong>500+ daily conversations</strong>. WhatsApp Business API meets intelligent RAG routing to qualify leads and answer product questions in real time, while a summarisation pipeline turns unstructured chats into structured metrics.</p>
+            <p class="project__impact"><span>Impact</span> Reduced response overhead; automated end-to-end onboarding and lead qualification.</p>
+            <div class="tags"><span>Python</span><span>LangChain</span><span>FastAPI</span><span>LLM</span><span>WhatsApp API</span><span>Vector DB</span><span>MySQL</span><span>AWS Lambda</span></div>
+          </div>
+          <div class="flow" aria-label="Architecture: WhatsApp to webhook to RAG router to vector database and LLM to summariser">
+            <div class="flow__node"><b>WhatsApp</b><small>Business API</small></div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node"><b>Webhook</b><small>FastAPI · Lambda</small></div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node flow__node--hot"><b>RAG Router</b><small>LangChain agent</small></div>
+            <div class="flow__split">
+              <div class="flow__node"><b>Vector DB</b><small>tenant-scoped</small></div>
+              <div class="flow__node"><b>LLM</b><small>answer + qualify</small></div>
+            </div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node"><b>Summariser</b><small>metrics → MySQL</small></div>
+          </div>
+        </article>
+
+        <article class="project glass tilt reveal">
+          <div class="project__body">
+            <p class="project__kicker mono">Healthcare · Page Object Model</p>
+            <h3 class="project__title">Claims Automation Engine</h3>
+            <p>An end-to-end Selenium automation suite built on the <strong>Page Object Model</strong> that sped claim-handling workflows by <strong>75%</strong>, with data-verification rules that catch broken claims before they're ever submitted.</p>
+            <p class="project__impact"><span>Impact</span> Higher claim throughput at <strong>zero submission errors</strong>.</p>
+            <div class="tags"><span>Python</span><span>Selenium WebDriver</span><span>POM</span><span>MySQL</span><span>OOP</span></div>
+          </div>
+          <div class="flow" aria-label="Pipeline: claims queue to validation rules to page objects to portal submission">
+            <div class="flow__node"><b>Claims queue</b><small>MySQL</small></div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node flow__node--hot"><b>Validation rules</b><small>reject broken claims</small></div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node"><b>Page Objects</b><small>Selenium · OOP</small></div>
+            <div class="flow__edge"><i></i></div>
+            <div class="flow__node"><b>Portal submit</b><small>0 errors</small></div>
+          </div>
+        </article>
+
+        <h3 class="subhead reveal">From GitHub</h3>
+        <div class="repos">
+          <a class="repo glass tilt reveal" href="https://github.com/duggitharun909-cmyk/AgenttoAgent_chatbot" target="_blank" rel="noopener">
+            <span class="repo__lang mono"><i style="--c:#a855f7"></i>Agents</span>
+            <h4>AgenttoAgent_chatbot</h4><p>Agent-to-agent chatbot — exploring conversations between cooperating AI agents.</p><span class="repo__go">↗</span></a>
+          <a class="repo glass tilt reveal" href="https://github.com/duggitharun909-cmyk/agent_chatbot" target="_blank" rel="noopener">
+            <span class="repo__lang mono"><i style="--c:#3776ab"></i>Python</span>
+            <h4>agent_chatbot</h4><p>Conversational AI agent chatbot built in Python.</p><span class="repo__go">↗</span></a>
+          <a class="repo glass tilt reveal" href="https://github.com/duggitharun909-cmyk/automated_checkin" target="_blank" rel="noopener">
+            <span class="repo__lang mono"><i style="--c:#3776ab"></i>Python</span>
+            <h4>automated_checkin</h4><p>Office tracker check-in/out automation with Playwright and randomised daily scheduling.</p><span class="repo__go">↗</span></a>
+          <a class="repo glass tilt reveal" href="https://github.com/duggitharun909-cmyk/playwright" target="_blank" rel="noopener">
+            <span class="repo__lang mono"><i style="--c:#3776ab"></i>Python</span>
+            <h4>playwright</h4><p>Browser automation experiments and patterns with Playwright for Python.</p><span class="repo__go">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI-NATIVE SDLC -->
+    <section class="section" id="aidlc">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">04</span>
+          <h2 class="section__title">How I build: <span class="gradient-text">AI-native SDLC</span></h2>
+        </header>
+        <p class="section__lede reveal">Agents do the building. Humans own the intent and the review. This very site was produced that way — from an <code>INTENT.md</code> to a deployed URL.</p>
+        <div class="aidlc">
+          <ol class="pipeline">
+            <li class="step glass reveal"><span class="step__n mono">01</span><h4>Intent</h4><p>Outcomes, audience and acceptance criteria captured in <code>INTENT.md</code>.</p></li>
+            <li class="step glass reveal"><span class="step__n mono">02</span><h4>Spec &amp; Guardrails</h4><p><code>CLAUDE.md</code> sets agent rules; <code>SPEC.md</code> fixes contracts.</p></li>
+            <li class="step glass reveal"><span class="step__n mono">03</span><h4>Agent Build</h4><p>Claude agents generate code with memory &amp; skillsets, task by task.</p></li>
+            <li class="step glass reveal"><span class="step__n mono">04</span><h4>Validate</h4><p>Automated tests + evals gate every change before review.</p></li>
+            <li class="step glass reveal"><span class="step__n mono">05</span><h4>Human Review</h4><p>I review against intent — accept, refine, or reject.</p></li>
+            <li class="step glass reveal"><span class="step__n mono">06</span><h4>Deploy</h4><p>Ship to serverless, observe, feed learnings back into intent.</p></li>
+          </ol>
+          <div class="code glass reveal" aria-label="Example INTENT.md">
+            <div class="code__bar"><i></i><i></i><i></i><span class="mono">INTENT.md</span></div>
+<pre class="mono"><span class="c-h"># Intent</span>
+Recruiters understand who Tharun is
+<span class="c-k">within 10 seconds</span> — and can reach him
+in one click.
+
+<span class="c-h">## Acceptance</span>
+- [x] WebGL hero, graceful fallback
+- [x] Every metric traces to résumé
+- [x] Contact → <span class="c-s">Python /api/contact</span>
+- [x] <span class="c-s">pytest</span> green · deployed on Vercel
+
+<span class="c-c">&lt;!-- built by agents · reviewed by a human --&gt;</span></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">05</span>
+          <h2 class="section__title">Toolkit</h2>
+        </header>
+        <div class="skills">
+          <div class="sphere reveal" id="tagSphere" aria-hidden="true"></div>
+          <div class="skill-groups">
+            <div class="skill-group glass reveal"><h4>AI / ML &amp; GenAI</h4><div class="tags"><span>AI Agent Frameworks</span><span>RAG</span><span>LLMs</span><span>Agentic Workflows</span><span>LangChain</span><span>Prompt Engineering</span><span>Vector Databases</span><span>Context-Aware Agents</span></div></div>
+            <div class="skill-group glass reveal"><h4>Voice AI &amp; Real-time</h4><div class="tags"><span>Plivo</span><span>Sarvam AI (STT)</span><span>Cartesia (TTS)</span><span>Voice Activity Detection</span><span>WebSockets</span><span>Audio Streaming</span><span>Latency Optimisation</span></div></div>
+            <div class="skill-group glass reveal"><h4>Backend &amp; Frameworks</h4><div class="tags"><span>FastAPI</span><span>Flask</span><span>RESTful APIs</span><span>Webhooks</span><span>Microservices</span><span>Selenium</span><span>Playwright</span><span>PyAutoGUI</span></div></div>
+            <div class="skill-group glass reveal"><h4>Cloud &amp; Production</h4><div class="tags"><span>AWS Lambda</span><span>Amazon EC2</span><span>Amazon S3</span><span>Docker</span><span>Git</span><span>CI/CD</span></div></div>
+            <div class="skill-group glass reveal"><h4>Languages &amp; Data</h4><div class="tags"><span>Python</span><span>JavaScript</span><span>SQL (Advanced)</span><span>HTML/CSS</span><span>MySQL</span><span>MongoDB</span><span>Vector Indexing</span></div></div>
+          </div>
+        </div>
+
+        <div class="edu">
+          <div class="edu__card glass reveal">
+            <span class="edu__icon" aria-hidden="true">🎓</span>
+            <div><h4>B.Tech, Electronics &amp; Communication Engineering</h4><p>Hindustan University · Aug 2018 — Aug 2022</p></div>
+          </div>
+          <div class="edu__card glass reveal">
+            <span class="edu__icon" aria-hidden="true">📜</span>
+            <div><h4>Certifications</h4><p>Developing LLM Applications with LangChain (DeepLearning.AI) · Advanced Python &amp; OOP · Flask &amp; FastAPI Architecture · Automated Testing with Selenium WebDriver</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <header class="section__head reveal">
+            <span class="section__num mono">06</span>
+            <h2 class="section__title">Let's build something <span class="gradient-text">intelligent</span>.</h2>
+          </header>
+          <p class="reveal">Hiring for AI agents, RAG or Python backend roles? Have a product that needs an LLM done properly? Drop a message — it lands straight in my inbox.</p>
+          <ul class="contact__list reveal">
+            <li><span class="mono">email</span><a href="mailto:duggitharun909@gmail.com">duggitharun909@gmail.com</a></li>
+            <li><span class="mono">linkedin</span><a href="https://linkedin.com/in/tharun-duggi" target="_blank" rel="noopener">in/tharun-duggi</a></li>
+            <li><span class="mono">github</span><a href="https://github.com/duggitharun909-cmyk" target="_blank" rel="noopener">duggitharun909-cmyk</a></li>
+            <li><span class="mono">based in</span><span>Hyderabad, Telangana · India</span></li>
+            <li><span class="mono">open to</span><span>Hyderabad · Chennai · Bengaluru</span></li>
+          </ul>
+        </div>
+
+        <form class="form glass reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <label class="field"><span>Name</span><input name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" placeholder="Your name" /><em class="field__err" data-for="name"></em></label>
+            <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@company.com" /><em class="field__err" data-for="email"></em></label>
+          </div>
+          <label class="field"><span>Subject</span><input name="subject" type="text" maxlength="120" placeholder="Role, project, or idea" /><em class="field__err" data-for="subject"></em></label>
+          <label class="field"><span>Message</span><textarea name="message" rows="5" required minlength="10" maxlength="3000" placeholder="Tell me a little about what you have in mind…"></textarea><em class="field__err" data-for="message"></em></label>
+          <label class="hp" aria-hidden="true">Company<input name="company" type="text" tabindex="-1" autocomplete="off" /></label>
+          <button class="btn btn--primary btn--block magnetic" type="submit" id="submitBtn">
+            <span class="btn__label">Send message</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 12l16-8-6 16-2.5-6.5L4 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Tharun Duggi</p>
+      <p class="mono">Built AI-native · Python · Three.js · Vercel</p>
+      <a href="#top" class="mono">back to top ↑</a>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/scene.js?v=4"></script>
+  <script src="assets/js/main.js?v=4" defer></script>
+</body>
+</html>

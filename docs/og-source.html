@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:630px;overflow:hidden;background:#05060b;font-family:Inter,sans-serif;color:#e8eaf6}
+.bg{position:absolute;inset:0;background:url(bg.png) center/cover;transform:translateX(70px)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,#05060b 0%,rgba(5,6,11,.92) 38%,rgba(5,6,11,.2) 62%,transparent 80%),radial-gradient(120% 100% at 50% 40%,transparent 60%,rgba(0,0,0,.6))}
+.c{position:absolute;left:72px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;width:720px}
+.badge{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;font-size:17px;color:#9aa0bf;border:1px solid rgba(148,163,255,.22);border-radius:999px;padding:8px 16px 8px 14px;background:rgba(10,12,22,.8)}
+.badge i{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 10px #34d399}
+h1{font:700 104px/.92 "Space Grotesk";letter-spacing:-.05em;margin-top:26px}
+h1 span{display:block;background:linear-gradient(110deg,#22d3ee,#818cf8 45%,#a855f7 75%,#f472b6);-webkit-background-clip:text;color:transparent;padding-bottom:.18em;margin-bottom:-.18em}
+.role{font:500 25px/1.3 "JetBrains Mono";color:#22d3ee;margin-top:26px}.role b{color:#a855f7;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips span{font:500 16.5px/1 "JetBrains Mono";padding:10px 14px;border-radius:10px;color:#c7d2fe;background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.28)}
+.chips span.h{color:#fff;border-color:rgba(244,114,182,.55);background:rgba(244,114,182,.12)}
+.url{position:absolute;left:72px;bottom:40px;font:500 18px "JetBrains Mono";color:#646a8a}.url b{color:#e8eaf6;font-weight:500}
+.logo{position:absolute;right:56px;bottom:36px;font:700 34px "Space Grotesk";letter-spacing:-.04em}.logo span{color:#22d3ee}
+</style></head><body>
+<div class="bg"></div><div class="shade"></div>
+<div class="c">
+  <div class="badge"><i></i>3+ years shipping AI to production</div>
+  <h1>Tharun<span>Duggi</span></h1>
+  <p class="role"><b>&gt;</b> AI Agent Developer · Python Full Stack</p>
+  <div class="chips"><span class="h">Real-time Voice AI</span><span>RAG &amp; LLM Agents</span><span>FastAPI</span><span>AWS Lambda</span></div>
+</div>
+<div class="url">tharun-duggi-portfolio<b>.vercel.app</b></div>
+<div class="logo">TD<span>.</span></div>
+</body></html>
