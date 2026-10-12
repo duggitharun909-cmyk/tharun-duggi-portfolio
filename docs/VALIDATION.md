@@ -34,3 +34,10 @@ Note: headless runs use software WebGL, so absolute numbers are worst case. Huma
 | Reproduced | ✅ | `WEBGL_lose_context.loseContext()` on the old build → sphere gone, no recovery, no fallback |
 | Context lost → readable fallback | ✅ | `body.no-webgl`, canvas `display:none`, dark gradient, text readable |
 | Context restored → scene resumes | ✅ | Sphere re-rendered, 0 page errors |
+
+## Iteration 4 — 2026-10-12 (GitHub + CI/CD)
+| Check | Result | Evidence |
+|---|---|---|
+| Repo created & pushed | ✅ | github.com/duggitharun909-cmyk/tharun-duggi-portfolio (public, `main`) — no `.env`/`.vercel` files tracked |
+| Vercel ⇄ GitHub connected | ✅ | `vercel git connect` → Connected |
+| Push to `main` auto-deploys | see commit | This commit is the test |

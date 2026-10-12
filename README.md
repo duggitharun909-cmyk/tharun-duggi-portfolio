@@ -24,8 +24,9 @@ Append `?lite` to the URL to disable bloom on slow GPUs.
 2. **Python path (recommended):** create a Gmail App Password (Google Account → Security → 2-Step Verification → App passwords), then in Vercel → Project → Settings → Environment Variables add
    `SMTP_USER=duggitharun909@gmail.com`, `SMTP_PASS=<16-char app password>` and redeploy. Messages now go through `api/contact.py`.
 
-## Deploy
-```bash
-npx vercel login
-npx vercel deploy --prod
-```
+## Deploy (CI/CD)
+Vercel is connected to this repo:
+- **push to `main`** → production deploy to https://tharun-duggi-portfolio.vercel.app
+- **pull request** → its own preview URL, posted on the PR for human review
+
+Manual fallback: `npx vercel deploy --prod`.
